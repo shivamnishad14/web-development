@@ -1,0 +1,12 @@
+#para1{
+    background-color: yellow;
+}
+.ColorPara{
+    background-color: green;
+    box-shadow: 5px 5px 5px 5px  red;
+}
+p{
+    color: blue;
+    background-color: black;
+    font-size: 30px;
+}
