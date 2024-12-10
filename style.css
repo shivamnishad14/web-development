@@ -7,6 +7,17 @@
 }
 p{
     color: blue;
-    background-color: black;
+    /* background-color: black; */
     font-size: 30px;
+}
+
+.sarawakil{
+    border: 5px solid red;
+}
+
+.faiza{
+    background-color: pink;
+}
+i{
+    font-size: 100px;
 }
