@@ -1,0 +1,9 @@
+#khan{
+
+    color:pink;
+    background-color: black;
+   font-size: 50px; 
+}
+#khan:hover{
+background-color: red;
+}
