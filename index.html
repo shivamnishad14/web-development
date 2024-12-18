@@ -7,55 +7,68 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        *{
+        /* General reset */
+        * {
             padding: 0;
             margin: 0;
+            box-sizing: border-box;
         }
+
+        /* Header styling */
         .header {
-          height: 100px;
+            height: 100px;
             display: flex;
-            justify-content: space-around;
-            font-size: 33px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
             background-color: #ffbc13;
+            font-size: 33px;
         }
 
-        .left {
-         
+        /* Social links container */
+        .header .left a {
+            margin: 0 10px;
         }
 
-        .right {
-       
-            display: flex;
-        }
-        i{
-            margin: 10px;
+        /* Social icons styling */
+        .header i {
             color: black;
-           margin-top: 30px;
+            font-size: 24px;
         }
-        .right p {
-            margin: auto 10px;
+
+        /* Contact details styling */
+        .header .right {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .right p {
+            margin: 0 20px;
             color: white;
         }
-        .right p span {
-        color: black;
-        }
 
+        .header .right p span {
+            color: black;
+        }
     </style>
 </head>
 
 <body>
-    <div class="header">
+    <header class="header">
+        <!-- Social Links -->
         <div class="left">
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
         </div>
+
+        <!-- Contact Details -->
         <div class="right">
-            <p>call us: <span>0657 655 5545</span></p>
-            <p>mail us: <span>vivekanandschool2013@gmail.com</span></p>
+            <p>Call us: <span>0657 655 5545</span></p>
+            <p>Mail us: <span>vivekanandschool2013@gmail.com</span></p>
         </div>
-    </div>
+    </header>
 </body>
 
 </html>
