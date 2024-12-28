@@ -5,57 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        *{
-            padding: 0;
-            margin: 0;
-        }
-        .header {
-          height: 100px;
+        #school{
             display: flex;
-            justify-content: space-around;
-            font-size: 33px;
-            background-color: #ffbc13;
+            flex-wrap: wrap;
         }
-
-        .left {
-         
-        }
-
-        .right {
-       
-            display: flex;
-        }
-        i{
+        li{
+            height: 100px;
             margin: 10px;
-            color: black;
-           margin-top: 30px;
+            width: 200px;
+            list-style: none;
+            display: flex;
+          justify-content: center;
+          align-items: center;
         }
-        .right p {
-            margin: auto 10px;
-            color: white;
+        button{
+            margin: 10px;
+            background-color: black;
+            color: white ;
+            font-size: 33px;
+            border: none;
+            padding: 10px 33px;
+            border-radius: 33px;
         }
-        .right p span {
-        color: black;
+        h1{
+            text-align: center;
         }
-
     </style>
 </head>
 
 <body>
-    <div class="header">
-        <div class="left">
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-        </div>
-        <div class="right">
-            <p>call us: <span>0657 655 5545</span></p>
-            <p>mail us: <span>vivekanandschool2013@gmail.com</span></p>
-        </div>
-    </div>
+    <h1> API Fethc method    </h1>
+<button onclick="showColor()">Click here to get all color List</button>
+<button onclick="showCountry()">Click here to get all Country List</button>
+    <h2 id="school"></h2>
+
+
+    <script>
+        console.log("Hello world");
+        // javascripot fetch method
+        function showColor() {
+            fetch('https://api.sampleapis.com/csscolornames/colors') // api for the get request
+            .then(response => response.json())
+            .then(data => document.getElementById('school').innerHTML = data.map(color => `<li style="background-color: ${color.hex}">${color.name}</li>`).join(""));
+        }
+        function showCountry() {
+            fetch('https://api.sampleapis.com/countries/countries') // api for the get request
+            .then(response => response.json())
+            .then(data => document.getElementById('school').innerHTML = data.map(color => `<li style="background-color: ${color.hex}">${color.name}</li>`).join(""));
+        }
+      
+      
+    </script>
 </body>
 
 </html>
