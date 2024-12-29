@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #school{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        li{
+            height: 100px;
+            margin: 10px;
+            width: 200px;
+            list-style: none;
+            display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        button{
+            margin: 10px;
+            background-color: black;
+            color: white ;
+            font-size: 33px;
+            border: none;
+            padding: 10px 33px;
+            border-radius: 33px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> API Fethc method    </h1>
+<button onclick="showColor()">Click here to get all color List</button>
+<button onclick="showCountry()">Click here to get all Country List</button>
+    <h2 id="school"></h2>
+
+
+    <script>
+        console.log("Hello world");
+        // javascripot fetch method
+        function showColor() {
+            fetch('https://api.sampleapis.com/csscolornames/colors') // api for the get request
+            .then(response => response.json())
+            .then(data => document.getElementById('school').innerHTML = data.map(color => `<li style="background-color: ${color.hex}">${color.name}</li>`).join(""));
+        }
+        function showCountry() {
+            fetch('https://api.sampleapis.com/countries/countries') // api for the get request
+            .then(response => response.json())
+            .then(data => document.getElementById('school').innerHTML = data.map(color => `<li style="background-color: ${color.hex}">${color.name}</li>`).join(""));
+        }
+      
+      
+    </script>
+</body>
+
+</html>
