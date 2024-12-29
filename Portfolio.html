@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            background-color: black;
+            color: white;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            color: white;
+            align-items: center;
+        }
+
+        .header .left {
+            text-decoration: underline;
+            color: skyblue;
+        }
+
+        .header .right ul {
+            display: flex;
+
+        }
+
+        .header .right ul li {
+            padding: 0px 33px;
+            list-style: none;
+        }
+
+        .header .right ul li:hover {
+            color: skyblue;
+            cursor: pointer;
+        }
+        .banner{
+            min-height: 90vh;
+            justify-content: center;
+            align-items: center
+        }
+.banner img {
+    height: 220px ;
+
+
+}
+    
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="left">Portfolio</div>
+        <div class="right">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Project</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner flex">
+        <div class="left">
+            <p class="para1"> Hi, There!</p>
+            <p class="para2">I'm Shivam</p>
+            <p class="para3">I am a Web Developer skilled in Frontend Technologies, such as HTML, CSS, and JavaScript,
+                creating interactive web experiences. I'm passionate about blending design aesthetics with
+                functionality.</p>
+            <div class="icons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="button">
+                <button>Hire Me</button>
+                <button>Download CV</button>
+            </div>
+        </div>
+        <div class="right">
+            <img src="./profile.jpg" alt="" srcset="">
+        </div>
+    </div>
+</body>
+
+</html>
