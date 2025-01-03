@@ -15,5 +15,5 @@ All Students Github UserName or UserId list https://docs.google.com/document/d/1
 
 
 
-CV templete https://docs.google.com/document/d/18YKxbNI8yEbWqBdaftUrLbWdMyGqHAw2l-Mq7Ocj_bI/edit?tab=t.0
+CV templete https://docs.google.com/document/d/1ai06IG6qGWOJJOLcUMbYHXKR7EcAlb3e/edit?usp=sharing&ouid=111427736840115353118&rtpof=true&sd=true   OR   https://shorturl.at/nBSjK
 
