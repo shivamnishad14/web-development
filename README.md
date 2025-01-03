@@ -15,6 +15,5 @@ All Students Github UserName or UserId list https://docs.google.com/document/d/1
 
 
 
-review robotics and AI
-It sounds like you've had a great experience with both C++ and Python Turtle in the robotics and AI workshop! If you want to share your experience, you could highlight how the workshop enhanced your understanding of robotics concepts, the challenges you faced, and how working with these programming languages helped you solve problems. You could also mention any exciting projects or hands-on activities you participated in. Would you like help crafting a more detailed experience or specific points you'd like to share?
+CV templete https://docs.google.com/document/d/18YKxbNI8yEbWqBdaftUrLbWdMyGqHAw2l-Mq7Ocj_bI/edit?tab=t.0
 
