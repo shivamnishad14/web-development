@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Integration</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        #messages { border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll; margin-bottom: 10px; }
+        #user-input { width: calc(100% - 100px); }
+        #send-btn { width: 80px; }
+    </style>
+</head>
+<body>
+    <h1>ChatGPT Integration</h1>
+    <div id="messages"></div>
+    <input type="text" id="user-input" placeholder="Type your message here">
+    <button id="send-btn">Send</button>
+
+   <script>
+    const API_KEY = "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"; // Replace with your OpenAI API key
+const API_URL = "https://api.openai.com/v1/chat/completions";
+
+const messagesDiv = document.getElementById("messages");
+const userInput = document.getElementById("user-input");
+const sendBtn = document.getElementById("send-btn");
+
+sendBtn.addEventListener("click", async () => {
+    const userMessage = userInput.value.trim();
+    if (!userMessage) return;
+
+    // Display user message
+    appendMessage("User", userMessage);
+    userInput.value = "";
+
+    // Call ChatGPT API
+    try {
+        const response = await fetch(API_URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${API_KEY}`,
+            },
+            body: JSON.stringify({
+                model: "gpt-4o-mini",
+                messages: [{ role: "user", content: userMessage }],
+            }),
+        });
+
+        const data = await response.json();
+        const botMessage = data.choices[0].message.content;
+
+        // Display ChatGPT's response
+        appendMessage("ChatGPT", botMessage);
+    } catch (error) {
+        appendMessage("Error", "Failed to fetch response from ChatGPT.");
+        console.error("Error:", error);
+    }
+});
+
+function appendMessage(sender, text) {
+    const messageDiv = document.createElement("div");
+    messageDiv.innerHTML = `<strong>${sender}:</strong> ${text}`;
+    messagesDiv.appendChild(messageDiv);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight; // Auto-scroll to the latest message
+}
+
+   </script>
+</body>
+</html>
