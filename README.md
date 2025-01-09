@@ -17,3 +17,4 @@ All Students Github UserName or UserId list https://docs.google.com/document/d/1
 
 CV templete https://docs.google.com/document/d/1Gh_ML9N_JwPJtZYDTGDGvgbyj-r20AMY/edit?usp=sharing&ouid=111427736840115353118&rtpof=true&sd=true
 
+CV Template 2 https://create.microsoft.com/en-us/template/classic-management-resume-2f858f7d-3675-4a8c-9728-c9fcd31d5649
